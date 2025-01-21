@@ -1,0 +1,331 @@
+@charset "utf-8";
+@font-face {
+    font-family: "CJONLYONE";
+    font-weight: 300;
+    src: url(font/CJONLYONE/CJONLYONENEWbodyLight.woff) format(woff);
+}
+@font-face {
+font-family: "CJONLYONE";
+font-weight: 500;
+src: url(font/CJONLYONE/CJONLYONE/CJONLYONE/CJONLYONENEWtitleMedium.woff) format(woff);
+}
+@font-face {
+font-family: "CJONLYONE";
+font-weight: 700;
+src: url(font/CJONLYONE/CJONLYONENEWtitleBold.woff) format(woff);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+body {
+    font-family: "CJONLYONE";
+}
+.header {
+    width: 100%;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+    z-index: 999;/* 항상 상위에 두도록 숫자를 높게 잡음 */
+}
+
+.header .link {
+    height: 35px;
+    background-color: #005b45;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+.header .link ul {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+}
+.header .link ul li {
+    font-size: 18px;
+}
+.header .link ul li:nth-child(2) {
+    margin-left: 10px;
+}
+.header .link ul li span {
+    margin-left: 15px;
+}
+.header .link .sns {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 10px;
+}
+.header .link .sns li:first-child a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    /* background-color: aqua; */
+    background: url(../img/icons.png) -69px -69px no-repeat;
+    background-size: 300px auto;/* width와 height의 값이 좌표값과 이미지 크기가 달라서 위로 배치됨 */
+}
+.header .link .sns li:nth-child(2) a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icons.png) -7px -69px / 300px no-repeat;
+    background-size: 300px auto;
+    margin-right: 10px;
+}
+.header .link .sns li:nth-child(3) a {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/icons.png) -37px -68px/ 300px no-repeat;
+    background-size: 300px auto;
+}
+/* a태그엔 비어있기 때문에 눌러도 커서가 바뀌지 않음
+따라서 a태그에 아이콘을 적용해야함
+하지만 li 중 a 첫번째, 두번째, 세번째에 적용하면 안됨
+왜냐하면 li 안에 a는 한개만 있기 때문
+내가 쓴 html 안의 a 를 지정하려면 첫번째 li의 a 로 작성해야한다.
+가장 많이 실수하는 부분임 기억하기 
+
+그렇게 a태그 안에 적용하면... 안보임
+a는 인라인태그여서 영역이 잡히지 않은것.
+따라서 li 안에 display block 추가*/
+
+.header .header_in {
+    height: 75px;
+/*     background-color: rgb(0, 17, 255); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: rgba(0, 0, 0, 0.15);
+}/* 로고 */
+.header .header_in h1 {
+    width: 100%;
+    line-height: 75px;
+    font-size: 30px;
+    text-align: center;
+}
+.header .header_in .nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+   /*  -webkit-box-pack: center; */
+}
+.header .header_in .nav .gnb {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    line-height: 75px;
+}
+.header .header_in .nav .gnb>li {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 30px;
+    color: #fff;
+    transition: 0.5s;
+    position: relative;
+    display: flex;
+    text-align: center;
+}
+.header .header_in .nav .gnb>li:hover .depth02 {
+    opacity: 1;
+    visibility: visible;
+    background-color: #ffffff;
+    color: #005b45;
+    width: 100%;
+    height: 400px;
+}
+
+.header .header_in .nav .gnb>li .depth02 {
+/*     display: none; */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 75px;
+    left: 0;
+}
+.header .header_in .nav .gnb>li .depth01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.header .header_in .nav .gnb .depth02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.header .header_in .util .menu_btn {
+    width: 20px;
+    height: 20px;
+    background: url(../img/gnb_icon_menu.png) center top / 100% no-repeat;
+}
+.header .header_in .util {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+
+
+.main_visual {
+    height: 100vh;
+}
+.main_visual video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;/* img태그도 마찬가지로 화면에서 발생하는 미세한 여백을 없앨 수 있다. */
+}
+
+
+.section-01 {
+    width: 1280px;
+    margin: 150px auto;
+}
+.section-01 .top_wrap .title h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #86cab6;
+}
+.section-01 .top_wrap .title p {
+    font-size: 60px;
+    font-weight: 700;
+}
+.section-01 .top_wrap .item_menu {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 13px; /* title 의 글자 영역까지 포함하는 높이이므로 아래를 띄워줘야함. 감으로보면서 띄워주기or포토샵으로 확인하기 */
+}
+.section-01 .top_wrap .item_menu li {
+    padding: 0 15px;/* 텍스트 길이가 제각가인 경우 width값을 주는 것보다 padding으로 여백을 동일하게 잡는 게 예쁘다 */
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    color: #999;
+    line-height: 40px;
+    margin: 0 4px;
+}
+.section-01 .top_wrap .item_menu li:hover {
+    background-color: #005b45;
+    color: #fff;
+}
+.section-01 .top_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;/* 한줄 수직 정렬: align-items / title의 글자영역까지 포함되는 높이이므로 글씨보다 아래쪽에 위치함. 따라서 item_menu에 아래 여백을 줘야함*153번째줄확인 */
+}
+.section-01 .item_wrap img {
+    width: 840px;
+    height: 550px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.section-01 .item_wrap .text {
+    width: 430px;
+    height: 550px;
+    border-radius: 40px;
+    background-color: #f6f8f8;
+    color: #005b45;
+    padding: 40px;
+    box-sizing: border-box;/* 430px+80px */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-01 .item_wrap .text span {
+    font-size: 50px;
+    font-weight: bold;
+    height: 305px;
+}
+.section-01 .item_wrap .text h3 {
+    font-size: 34px;
+    margin: 0 0 25px;
+}
+.section-01 .item_wrap .text {
+    font-size: 16px;
+    line-height: 21px;
+}
+.section-01 .item_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.section-02 {
+    width: 100%;
+    background-color: #F6F8F8;
+    padding: 150px 0;
+}
+.section-02 .inner {
+    width: 1280px;
+    margin: 0px auto;
+}
+.section-02 .inner .title h2 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #86cab6;
+}
+.section-02 .inner .title p {
+    font-size: 60px;
+    font-weight: 700;
+}
+.section-02 .inner .item_wrap {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.section-02 .inner .item_wrap > div {/* > 는 바로 아래 자식 태그에만 적용됨(자손x) */
+    width: 410px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.section-02 .inner .item_wrap > div img {
+    width: 410px;
+}
+.section-02 .inner .item_wrap > div .item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;/* 위치에서 벗어난 자식들을 숨겨줘야 radius값이 적용된 것 처럼 보인다 */
+}
+.section-02 .inner .item_wrap > div .item .text {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgb(0,0,0);/* 그라디언트io사이트이용 https://cssgradient.io/ */
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 1%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    display: flex;/* height값을 100%로 하면 텍스트가 다시 이미지 위로 정렬됨. 따라서 flex를 이용해 다시 조정필요 */
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px 40px;
+    box-sizing: border-box;/* 해당 영역 안에서만 간격조정(padding)이 일어날 수 있도록 */
+}
+.section-02 .inner .item_wrap > div .item .text h3 {
+    margin: 0 0 20px;
+    font-size: 30px;
+}
+.section-02 .inner .item_wrap > div .item .text p {
+    font-size: 16px;
+}

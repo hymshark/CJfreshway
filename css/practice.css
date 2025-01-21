@@ -1,0 +1,221 @@
+@charset "utf-8";
+@font-face {
+    font-family: "CJONLYONE";
+    font-weight: 300;
+    src: url(font/CJONLYONE/CJONLYONENEWbodyLight.woff) format(woff);
+  }
+  
+  
+  @font-face {
+    font-family: "CJONLYONE";
+    font-weight: 500;
+    src: url(font/CJONLYONE/CJONLYONE/CJONLYONE/CJONLYONENEWtitleMedium.woff) format(woff);
+  }
+  
+  @font-face {
+    font-family: "CJONLYONE";
+    font-weight: 700;
+    src: url(font/CJONLYONE/CJONLYONENEWtitleBold.woff) format(woff);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+a {
+    text-decoration: none;
+    color: none;
+}
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "CJONLYONE";
+}
+
+.section {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.main_visual {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.header a img {
+    width: 93px;
+    height: 30px;
+    object-fit: cover;
+    padding: 20px 50px;
+}
+.header .nav {
+    align-content: center;
+}
+.header .nav ul {
+    display: flex;
+    justify-content: center;
+}
+.header .nav ul li {
+    padding: 0 30px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.section .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section .title .logo {
+    height: 100px;
+}
+.section .title .logo h1 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #86cab6;
+}
+.section .title .logo h2 {
+    font-size: 60px;
+    margin-right: 50px;/* 이게아니라 플렉스를 했어야지 */
+}
+.title .menu ul {
+    display: flex;
+    gap: 30px;
+}
+.title .menu ul li {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    color: #999;
+    border-radius: 30px;
+}
+.section .menu ul li:hover {
+    background-color: #005b45;
+    color: #fff;
+}
+.contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.contents img {
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.contents .contain {
+    width: 100%;
+    height: 600px;
+    background-color: #f6f8f8;
+    color: #005b45;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+.contents .contain h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 40px 0 0 40px;
+    color: #005b45;
+}
+.contents .contain .text {
+    margin: 40px 0 40px 40px;
+}
+.contents .contain .text h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+}
+
+.ESG {
+    width: 1277.97px;
+    height: 623.98px;
+    margin: 0 auto;
+}
+.ESG .item_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-top: 40px;
+}
+.ESG .item_wrap ul{
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 30px;
+}
+.ESG .item_wrap .item ul {
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    gap: 30px;
+}
+.ESG .item_wrap ul li {
+    display: flex;
+    align-items: end;
+    padding: 30px 40px;
+}
+.ESG .item_wrap ul li:first-child {
+    background: url(../img/CJ_esg01_landscape.jpg) center center/cover no-repeat ;
+    border-radius: 20px;
+    width: 330px;
+    height: 240px;
+}
+.ESG .item_wrap ul li:nth-child(2) {
+    background: url(../img/CJ_esg02_landscape.jpg) center center/cover no-repeat ;
+    border-radius: 20px;
+    width: 330px;
+    height: 240px;
+}
+.ESG .item_wrap .item ul li:nth-child(1) {
+    background: url(../img/CJ_esg03_landscape.jpg) center center/cover no-repeat ;
+    border-radius: 20px;
+    width: 330px;
+    height: 240px;
+}
+.ESG .item_wrap .item ul li:nth-child(2) {
+    background: url(../img/CJ_esg05_landscape.jpg) center center/cover no-repeat ;
+    border-radius: 20px;
+    width: 330px;
+    height: 240px;
+}
+.ESG .item_wrap .middle_text {
+    width: 330px;
+    background: url(../img/CJ_esg04_landscape.jpg) center center/cover no-repeat ;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+.ESG .item_wrap .middle_text a p {
+    font-size: 16px;
+    color: #fff;
+}
+.ESG .item_wrap {
+    color: #fff;
+}
+strong {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.ESG .item_wrap ul li a p {
+    font-size: 16px;
+    color: #fff;
+}
